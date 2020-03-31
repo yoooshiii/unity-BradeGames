@@ -7,19 +7,20 @@ using UnityEngine.SceneManagement;
 
 public class EndGameManager : MonoBehaviour
 {
+    private const int V = 0;
     float Score;
     public Text ScoreText;
-    float highScore;
+    float highScore = V;
     public Text highScoreText;
     public GameObject Conguratulations;
     void Start()
     {
+
         Score = PlayerPrefs.GetFloat("SCORE");
         if (ScoreText != null)
         {
             ScoreText.text = Score.ToString("f1");
         }
-
         if (PlayerPrefs.HasKey("highScore") == true)
         {//セーブデータがある→HasKey
             highScore = PlayerPrefs.GetFloat("highScore");//ゼロを代入。データをロード

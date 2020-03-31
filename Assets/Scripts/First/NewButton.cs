@@ -49,7 +49,6 @@ public class NewButton : MonoBehaviour
         {
             nameSettingcanvas.SetActive(false);
         }
-
     }
     public void OnclickRT1()
     {
